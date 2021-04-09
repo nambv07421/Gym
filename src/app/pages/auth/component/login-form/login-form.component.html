@@ -1,1 +1,23 @@
-<p>login-form works!</p>
+<form (ngSubmit)="submit()">
+    <div class="login-form">
+        <div class="login-title">
+            <p>{{btnButton}}</p>
+            <span>{{btnTitle}}</span>
+        </div>
+        <div class="login-input">
+            <input [(ngModel)]="model.username" name="userame" type="text" placeholder="Nhập email của bạn">
+            <input *ngIf="checkLogin" [(ngModel)]="model.password" name="password" type="password"
+                placeholder="Nhận mật khẩu">
+        </div>
+        <p class="forgot" *ngIf="checkLogin" (click)="routoForgot()">Quên mật khẩu ?</p>
+        <p class="forgot" *ngIf="!checkLogin" [routerLink]="'/login'">Quay lại đăng nhập .</p>
+        <div class="login-button">
+            <button type="submit" *ngIf="!checkLogin">
+                Lấy lại mật khẩu
+            </button>
+            <button type="submit" *ngIf="checkLogin">
+                Đăng nhập
+            </button>
+        </div>
+    </div>
+</form>

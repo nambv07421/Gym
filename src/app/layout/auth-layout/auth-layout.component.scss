@@ -1,12 +1,9 @@
 .login {
     height: 100vh;
     overflow: hidden;
-    .login-left {
-        height: 100vh;
-        background-color: antiquewhite;
-    }
-    .login-right {
-        height: 100vh;
-        background-color: azure;
-    }
+    background-color: #f3f3f3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }

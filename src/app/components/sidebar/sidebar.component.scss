@@ -1,0 +1,16 @@
+.side-bar {
+    height: 100vh;
+    width: 240px;
+    background-color: #404e67;
+    position: absolute;
+    z-index: 10;
+    .logo {
+        text-align: center;
+        height: 60px;
+        line-height: 60px;
+        box-shadow: 0 0 11px rgb(0 0 0 / 13%);
+        img {
+            width: 150px;
+        }
+    }
+}

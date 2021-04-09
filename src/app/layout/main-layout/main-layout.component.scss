@@ -1,0 +1,17 @@
+.main {
+    display: flex;
+    height: 100vh;
+    .main-header {
+        width: 100%;
+    }
+    .main-content {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        .content {
+            background-color: #ccc;
+            height: 100vh;
+            width: 100%;
+        }
+    }
+}
