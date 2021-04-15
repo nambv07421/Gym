@@ -14,3 +14,31 @@
         }
     }
 }
+.nav {
+    display: flex;
+    flex-direction: column;
+    .nav-menu-active {
+        background: #0a2956;
+        height: 55px;
+        width: 100%;
+        margin-left: 0px !important;
+        padding-left: 30px;
+    }
+    p {
+        font-size: 24px;
+        color: #ccc;
+        margin: 30px 0px 30px 30px;
+    }
+    .nav-menu {
+        display: flex;
+        align-items: center;
+        margin: 30px 0px 10px 30px;
+        outline: none;
+        .nav-menu-list {
+            color: #fff;
+            font-size: 20px;
+            margin-left: 15px;
+            font-weight: 400;
+        }
+    }
+}

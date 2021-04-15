@@ -38,9 +38,14 @@ export class HeaderComponent implements OnInit {
 }
 
 @NgModule({
-  declarations: [HeaderComponent],
+  declarations: [
+    HeaderComponent
+  ],
   imports: [
     CommonModule,
-  ], exports: [HeaderComponent]
+  ],
+  exports: [
+    HeaderComponent
+  ]
 })
 export class HeaderModule { }

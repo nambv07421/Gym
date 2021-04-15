@@ -2,5 +2,55 @@
     <div class="logo">
         <img src="../../../assets/images/logo.png" alt="">
     </div>
-    
+    <div class="nav">
+        <p>Thống kê</p>
+        <div *ngFor="let i of dataNavMenu?.home" [routerLink]="[i.linkURL]" class="nav-menu"
+            [routerLinkActive]="['nav-menu-active']">
+            <div class="nav-menu-icon" [routerLinkActive]="['nav-menu-active-icon']">
+                <img [src]="i.icon" alt="">
+            </div>
+            <div class="nav-menu-list" [routerLinkActive]="['nav-menu-active-list']">
+                {{i.name}}
+            </div>
+
+        </div>
+    </div>
+    <div class="nav">
+        <p>Nhân sự</p>
+        <div *ngFor="let i of dataNavMenu?.user" [routerLink]="[i.linkURL]" class="nav-menu"
+            [routerLinkActive]="['nav-menu-active']">
+            <div class="nav-menu-icon" [routerLinkActive]="['nav-menu-active-icon']">
+                <img [src]="i.icon" alt="">
+            </div>
+            <div class="nav-menu-list" [routerLinkActive]="['nav-menu-active-list']">
+                {{i.name}}
+            </div>
+        </div>
+    </div>
+    <div class="nav">
+        <p>Dịch vụ</p>
+        <div *ngFor="let i of dataNavMenu?.service" [routerLink]="[i.linkURL]" class="nav-menu"
+            [routerLinkActive]="['nav-menu-active']">
+            <div class="nav-menu-icon" [routerLinkActive]="['nav-menu-active-icon']">
+                <img [src]="i.icon" alt="">
+            </div>
+            <div class="nav-menu-list" [routerLinkActive]="['nav-menu-active-list']">
+                {{i.name}}
+            </div>
+
+        </div>
+    </div>
+    <div class="nav">
+        <p>Tương tác</p>
+        <div *ngFor="let i of dataNavMenu?.support" [routerLink]="[i.linkURL]" class="nav-menu"
+            [routerLinkActive]="['nav-menu-active']">
+            <div class="nav-menu-icon" [routerLinkActive]="['nav-menu-active-icon']">
+                <img [src]="i.icon" alt="">
+            </div>
+            <div class="nav-menu-list" [routerLinkActive]="['nav-menu-active-list']">
+                {{i.name}}
+            </div>
+
+        </div>
+    </div>
 </div>
