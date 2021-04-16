@@ -1,8 +1,9 @@
-import { Component, NgModule, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-home',
-  template: '',
+  templateUrl: './home.component.html',
+  styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
 
@@ -10,20 +11,5 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
-}
-@NgModule({
-  declarations: [
-    HomeComponent
-  ],
-  imports: [
-
-  ],
-  exports: [
-    HomeComponent
-  ]
-
-})
-export class HomeModule {
 
 }

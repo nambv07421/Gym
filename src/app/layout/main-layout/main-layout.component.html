@@ -1,13 +1,14 @@
 <div class="main">
-    <div>
+    <div class="main-sidebar">
         <app-sidebar [dataNavMenu]="dataNav"></app-sidebar>
     </div>
     <div class="main-content">
-        <app-header></app-header>
-        <div class="content">
+        <div class="main-content-header">
+            <app-header></app-header>
+        </div>
+        <div class="main-content-body">
             <router-outlet></router-outlet>
         </div>
+
     </div>
-
-
 </div>

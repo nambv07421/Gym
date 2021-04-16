@@ -4,12 +4,10 @@ import { AppComponent } from './app.component';
 import { RouterModule } from '@angular/router';
 import { appRoutes } from './app.routes';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { BaseTableComponent } from './components/table/base-table/base-table.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    BaseTableComponent,
   ],
   imports: [
     BrowserModule,

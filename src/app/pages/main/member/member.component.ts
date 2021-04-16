@@ -2,7 +2,7 @@ import { Component, NgModule, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-member',
-  template: '',
+  template: '<router-outlet></router-outlet>',
 })
 export class MemberComponent implements OnInit {
 
@@ -10,18 +10,5 @@ export class MemberComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
-}
-@NgModule({
-  declarations: [
-    MemberComponent
-  ],
-  imports: [
-
-  ], exports: [
-    MemberComponent
-  ]
-})
-export class MemberModule {
 
 }
