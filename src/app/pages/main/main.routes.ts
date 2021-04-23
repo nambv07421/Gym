@@ -56,7 +56,7 @@ export const mainRoutes: Routes = [
             },
             {
                 path: '',
-                redirectTo: 'home',
+                redirectTo: 'user',
                 pathMatch: 'full'
             }
         ]

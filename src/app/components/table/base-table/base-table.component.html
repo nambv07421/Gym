@@ -1,30 +1,44 @@
-<table class="table">
-    <thead>
-        <tr>
-            <th scope="col">#</th>
-            <th scope="col">First</th>
-            <th scope="col">Last</th>
-            <th scope="col">Handle</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <th scope="row">1</th>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>@mdo</td>
-        </tr>
-        <tr>
-            <th scope="row">2</th>
-            <td>Jacob</td>
-            <td>Thornton</td>
-            <td>@fat</td>
-        </tr>
-        <tr>
-            <th scope="row">3</th>
-            <td>Larry</td>
-            <td>the Bird</td>
-            <td>@twitter</td>
-        </tr>
-    </tbody>
-</table>
+<div class="base-table">
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th scope="col" *ngFor="let item of listlable">{{item.name}}</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of data ; let index =index">
+                <td *ngFor="let i of listlable ">
+                    <span *ngIf="i.type=== 'number'">
+                        {{item[i.id]}}
+                    </span>
+                    <span *ngIf="i.type=== 'text'">
+                        {{item[i.id]}}
+                    </span>
+                    <span *ngIf="i.type=== 'setting'" class="action" (click)="showMenu(index, item)">
+                        <div class="menu-drop" *ngIf="visibleIndex === index">
+                            <ul>
+                                <li>
+                                    <img src="assets/images/Settings.png" alt="">
+                                    <a href="">Thêm </a>
+                                </li>
+                                <li>
+                                    <img src="assets/images/package.png" alt="">
+                                    <a href="">sửa</a>
+                                </li>
+                                <li>
+                                    <img src="assets/images/preview.png" alt="">
+                                    <a href="">xoá</a>
+                                </li>
+                                <li *ngIf="i.databutton[0].buttonLock==='true'">
+                                    <img src="assets/images/preview.png" alt="">
+                                    <a href=""> Khoá </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </span>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+</div>
