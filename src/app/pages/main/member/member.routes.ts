@@ -6,6 +6,7 @@ export const memberRouter: Routes = [
     {
         path: '',
         component: MemberComponent,
+        data: { animation: 'isRight' },
         children: [
             {
                 path: 'list',

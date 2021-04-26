@@ -1,14 +1,19 @@
-<div class="main">
-    <div class="main-sidebar">
-        <app-sidebar [dataNavMenu]="dataNav"></app-sidebar>
-    </div>
-    <div class="main-content">
-        <div class="main-content-header">
-            <app-header></app-header>
-        </div>
-        <div class="main-content-body">
-            <router-outlet></router-outlet>
-        </div>
+<div class="a">
+    <mat-drawer-container class="example-container" autosize>
+        <div class="main">
+            <div class="main-sidebar">
+                <app-sidebar [dataNavMenu]="dataNav"></app-sidebar>
+            </div>
+            <div class="main-content">
+                <div class="main-content-header">
+                    <app-header></app-header>
+                </div>
 
-    </div>
+                <div class="main-content-body" [@routeAnimations]="prepareRoute(outlet)">
+                    <router-outlet #outlet="outlet"></router-outlet>
+                </div>
+
+            </div>
+        </div>
+    </mat-drawer-container>
 </div>

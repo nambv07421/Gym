@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { FormGroup, FormControl } from '@angular/forms';
 import { Router } from '@angular/router';
 
 import { AuthModel } from 'src/app/models/authModel/auth.model';
@@ -14,10 +15,10 @@ export class LoginFormComponent implements OnInit {
   @Output() onSubmit = new EventEmitter();
   @Output() onForgot = new EventEmitter();
   checkLogin = true;
-  model: AuthModel = {
-    username: '',
-    password: ''
-  };
+  form = new FormGroup({
+    username: new FormControl(),
+    password: new FormControl()
+  })
   constructor(
     private router: Router,
   ) { }
@@ -30,9 +31,10 @@ export class LoginFormComponent implements OnInit {
     this.router.navigateByUrl('forgot')
     this.checkLogin = !this.checkLogin;
 
+
   }
   submit() {
-    this.onSubmit.emit(this.model)
+    this.onSubmit.emit(this.form.value)
   }
 
 }

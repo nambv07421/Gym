@@ -1,12 +1,16 @@
 import { Component, OnInit } from '@angular/core';
+import { RouterOutlet } from '@angular/router';
+import { farder } from 'src/app/ultils/animation/farder.animation';
 
 @Component({
   selector: 'app-main-layout',
   templateUrl: './main-layout.component.html',
-  styleUrls: ['./main-layout.component.scss']
+  styleUrls: ['./main-layout.component.scss'],
+  animations: [
+    farder,
+  ]
 })
 export class MainLayoutComponent implements OnInit {
-
   constructor() { }
   dataNav = {
     home: [
@@ -81,5 +85,11 @@ export class MainLayoutComponent implements OnInit {
   ngOnInit(): void {
 
   }
-
+  prepareRoute(outlet: RouterOutlet) {
+    return (
+      outlet &&
+      outlet.activatedRouteData &&
+      outlet.activatedRouteData['animation']
+    );
+  }
 }

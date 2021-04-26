@@ -5,6 +5,7 @@ import { HeaderModule } from "../components/header/header.component";
 import { SideBarModule } from "../components/sidebar/sidebar.component";
 import { AuthLayoutComponent } from "./auth-layout/auth-layout.component";
 import { MainLayoutComponent } from "./main-layout/main-layout.component";
+import { MatSidenavModule } from '@angular/material/sidenav';
 
 @NgModule({
     declarations: [AuthLayoutComponent, MainLayoutComponent],
@@ -12,7 +13,8 @@ import { MainLayoutComponent } from "./main-layout/main-layout.component";
         CommonModule,
         RouterModule,
         HeaderModule,
-        SideBarModule
+        SideBarModule,
+        MatSidenavModule
     ], exports: [
         AuthLayoutComponent, MainLayoutComponent
     ]

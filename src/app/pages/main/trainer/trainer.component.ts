@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, NgModule, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-trainer',
@@ -11,5 +11,11 @@ export class TrainerComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
+}
+@NgModule({
+
+})
+export class TrainerModule {
 
 }
